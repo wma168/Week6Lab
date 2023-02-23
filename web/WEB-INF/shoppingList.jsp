@@ -9,15 +9,15 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Shopping List</title>
     </head>
-    <body>
+    <<body>
         <h1>Shopping List</h1>
         Hello, ${username} 
-        <a href="ShoppingList?action=logout">Logout</a><br>
+        <a href="shoppingList?action=logout">Logout</a><br>
         
         <h2>List</h2>
-        <form action="ShoppingList" method="post">
+        <form action="shoppingList" method="post">
             Add Item: 
             <input type="text" name="itemToAdd"> 
             <input type="submit" value="Add">
@@ -25,7 +25,7 @@
             ${message}
         </form>
         <br>
-        <form action="ShoppingList" method="post">
+        <form action="shoppingList" method="post">
             
              <c:forEach items="${items}" var="item">
             <input type="radio" name="foodDelete" value="${item}">

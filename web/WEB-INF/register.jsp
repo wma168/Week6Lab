@@ -13,7 +13,7 @@
     </head>
     <body>
         <h1>Shopping List</h1>
-        <form action="ShoppingList" method="post">
+        <form action="shoppingList" method="post">
             Username: <input type="text" name="username">
             <input type="submit" value="Register name">
             <input type="hidden" name="action" value="register">
