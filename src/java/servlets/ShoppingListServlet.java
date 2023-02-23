@@ -25,7 +25,7 @@ public class ShoppingListServlet extends HttpServlet {
            else if(request.getParameter("action").equals("logout")){
             session.invalidate();
             HttpSession session2 = request.getSession();
-            session2.setAttribute("message","You have logged out");
+            session2.setAttribute("message","You have logged out successfully.");
             getServletContext().getRequestDispatcher("/WEB-INF/register.jsp").forward(request, response);
             }
            else{
@@ -57,14 +57,14 @@ public class ShoppingListServlet extends HttpServlet {
             getServletContext().getRequestDispatcher("/WEB-INF/shoppingList.jsp").forward(request, response);
             }
             else{
-                session.setAttribute("message","Please enter a valid item");
+                session.setAttribute("message","Please enter a valid item.");
                 getServletContext().getRequestDispatcher("/WEB-INF/shoppingList.jsp").forward(request, response);
             }
 
         }
         else if(action.equals("delete")){
             session.removeAttribute("message");
-            ArrayList<String> items=(ArrayList<String>)session.getAttribute("items");
+            ArrayList<String> items=(ArrayList<String>)session.getAttribute("item");
             if(items==null)
                 items=new ArrayList<>();
             String item = request.getParameter("foodDelete");

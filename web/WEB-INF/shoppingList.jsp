@@ -22,14 +22,14 @@
             <input type="text" name="itemToAdd"> 
             <input type="submit" value="Add">
             <input type="hidden" name="action" value="add">
-            ${message}
+            <br> ${message}
         </form>
         <br>
         <form action="shoppingList" method="post">
             
              <c:forEach items="${items}" var="item">
-            <input type="radio" name="foodDelete" value="${item}">
-            ${item}
+            <input type="radio" name="foodDelete" value="${items}">
+            ${items}
             <br>            
             
         </c:forEach>
